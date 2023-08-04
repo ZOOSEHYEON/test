@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Styled/Home.css';
 /* import Banner from '../assets/home-image/home-banner.png'; */
 
 const Home = () => {
+    const [scrolled, setScrolled] = useState(false);
+
+    const handleScroll = () => {
+        const isScrolled = window.scrollY > 0;
+        setScrolled(isScrolled);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+  }, []);
     return (
         <div id='home' className='home-wrap'>
             <div className='home-contents'>
@@ -12,7 +25,7 @@ const Home = () => {
                         {/* <h2>상상 그 이상,</h2> */}
                         <h2>IT기술과 서비스로 더 나은 삶을 향해</h2>
                     </div>
-                    <div className='home-bg-box'>
+                    <div className={scrolled ? 'home-bg-box' : 'none'}>
                         <div className='bg-text-box left-box'>
                             <div>
                                 <h4>Connect</h4>

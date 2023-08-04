@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import useScrollFadeIn from '../Hook/useScrollFadeIn';
 import '../Styled/About.css';
 import Icon1 from '../assets/about-image/value-left-icon.svg';
 import Icon2 from '../assets/about-image/value-center-icon.svg';
@@ -6,16 +7,25 @@ import Icon3 from '../assets/about-image/value-right-icon.svg';
 import ValueCoreImg from '../assets/about-image/about-core-value.png';
 
 const About = () => {
+
+    const fadeIn1 = useScrollFadeIn('up', 1, 0);
+    const fadeIn2 = useScrollFadeIn('up', 1, 200);
+    const fadeIn3 = useScrollFadeIn('up', 1, 400);
+    const fadeIn4 = useScrollFadeIn('down', 1, 0);
+    const fadeIn5 = useScrollFadeIn('down', 1, 200);
+    const fadeIn6 = useScrollFadeIn('down', 1, 400);
+    const fadeIn7 = useScrollFadeIn('down', 1, 0);
+
     return (
         <div className='about-wrap'>
             <div className='about-content-box'>
-                <div className='about-box'>
+                <div ref={fadeIn1.ref} style={fadeIn1.style} className='about-box'>
                     <div className='img-box-overlay left-overlay'></div>
                     <div className='text-squar'>
                         <span>OURSTORY</span>
                     </div>
                 </div>
-                <div className='about-box about-center-box'>
+                <div ref={fadeIn2.ref} style={fadeIn2.style} className='about-box about-center-box'>
                     <div>
                         <h3>
                             연결, 개선, 혁신
@@ -25,21 +35,22 @@ const About = () => {
                         </h3>
                     </div>
                 </div>
-                <div className='about-box'>
+                <div ref={fadeIn3.ref} style={fadeIn3.style} className='about-box'>
                     <div className='img-box-overlay right-overlay'></div>
                     <div className='text-squar'>
                         <span>PASSION</span>
                     </div>
                 </div>
             </div>
-            <div className='about-value-wrap'>
+            <div id='about' className='about-value-wrap' >
                 <div className='value-top-text'>
                     <div className='value-line'></div>
                     <h3>가치 실현</h3>
                     <div className='value-line'></div>
                 </div>
                 <div className='value-img-wrap'>
-                    <div className='value-box'>
+                {/* <div ref={serviceRef} className={`value-img-wrap${isVisible ? 'visible':''}`}> */}
+                    <div ref={fadeIn4.ref} style={fadeIn4.style} className='value-box'>
                         <div className='v-img-overlay v-left-overlay'></div>
                         <div className='v-text-box'>
                             <img src={Icon1} alt="left icon"/>
@@ -50,7 +61,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='value-box'>
+                    <div ref={fadeIn5.ref} style={fadeIn5.style} className='value-box'>
                         <div className='v-img-overlay v-center-overlay'></div>
                         <div className='v-text-box'>
                             <img src={Icon2} alt="center icon"/>
@@ -62,7 +73,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <div className='value-box'>
+                    <div ref={fadeIn6.ref} style={fadeIn6.style} className='value-box'>
                         <div className='v-img-overlay v-right-overlay'></div>
                         <div className='v-text-box'>
                             <img src={Icon3} alt="right icon"/>
@@ -102,7 +113,9 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <img src={ValueCoreImg} alt="valuecoreimage"/>
+                    <div ref={fadeIn7.ref} style={fadeIn7.style} className='value-core-img-wrap'>
+                        <img src={ValueCoreImg} alt="valuecoreimage"/>
+                    </div>
                 </div>
             </div>
         </div>
