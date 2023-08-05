@@ -126,6 +126,6 @@ p{user-select: none;}
     .home-bg-box{display: none;}
 }
 @media screen and (max-width: 650px) {
-    .home-bg-img{/* height: 100vh; */}
+    .home-bg-img{height: 800px;}
     .home-bg-text h2{font-size: 25px;}
 }

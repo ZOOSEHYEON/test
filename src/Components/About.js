@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import useScrollFadeIn from '../Hook/useScrollFadeIn';
 import '../Styled/About.css';
 import Icon1 from '../assets/about-image/value-left-icon.svg';
