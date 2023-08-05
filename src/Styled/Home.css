@@ -15,6 +15,7 @@ p{user-select: none;}
 .home-bg-img{
     position: relative;
     width: 100%;
+    height: 1000px;
     /* height: 1000px; */
     background: #000;
     z-index: 0;
@@ -24,8 +25,8 @@ p{user-select: none;}
     top: 0;
     left: 0;
     width: calc(100vw - (100vw - 100%));
-    /* height: 100%; */
-    height: 100vh;
+    height: 100%;
+    /* height: 100vh; */
     background-image: url('../assets/home-image/home-banner.png');
     background-size: cover;
     background-position: center;
@@ -125,6 +126,6 @@ p{user-select: none;}
     .home-bg-box{display: none;}
 }
 @media screen and (max-width: 650px) {
-    .home-bg-img{height: 100vh;}
+    .home-bg-img{/* height: 100vh; */}
     .home-bg-text h2{font-size: 25px;}
 }
