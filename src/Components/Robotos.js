@@ -20,6 +20,7 @@ const Robotos = () => {
     const fadeIn2 = useScrollFadeIn('up', 1, 0);
     const fadeIn3 = useScrollFadeIn('up', 1, 200);
     const fadeIn4 = useScrollFadeIn('up', 1, 100);
+    const fadeIn5 = useScrollFadeIn('up', 0.5, 0);
     const fadeInLeft1 = useScrollFadeIn('rightToLeft', 1, 0); 
     const fadeInLeft2 = useScrollFadeIn('rightToLeft', 1, 200); 
     const fadeInLeft3 = useScrollFadeIn('rightToLeft', 1, 400); 
@@ -40,21 +41,26 @@ const Robotos = () => {
                         </div>
                     </div>
                     <div>
-                        <Controller>
-                            <Scene duration={100} triggerHook="onEnter">
-                            {(progress) => {
-                                const translateX = (1 - progress) * 200;
-                                TweenMax.to(".box", 1, { x: translateX });
-                                return (
-                                <div className="box" style={{height: "100%"}}>
-                                    <div className='right-mockup-box'>
-                                        <img src={Mockup} alt="mockupimage"/>
+                        <div className="desktop-right-mockup-box">
+                            <Controller>
+                                <Scene duration={100} triggerHook="onEnter">
+                                {(progress) => {
+                                    const translateX = (1 - progress) * 200;
+                                    TweenMax.to(".box", 1, { x: translateX });
+                                    return (
+                                    <div className="box" style={{height: "100%"}}>
+                                        <div className='right-mockup-box'>
+                                            <img src={Mockup} alt="mockupimage"/>
+                                        </div>
                                     </div>
-                                </div>
-                                );
-                            }}
-                            </Scene>
-                        </Controller>
+                                    );
+                                }}
+                                </Scene>
+                            </Controller>
+                        </div>
+                        <div ref={fadeIn5.ref} style={fadeIn5.style} className='mobile-right-mockup-box'>
+                            <img src={Mockup} alt="mockupimage"/>
+                        </div>
                     </div>
                 </div>
                 <div className='robotos-bottom-mockup-wrap'>
@@ -90,10 +96,10 @@ const Robotos = () => {
                         <div className='about-bottom-text-box'>
                             <p>
                                 더이상 발품팔 필요 없습니다! 이제부터 로보토스에서 쉽게 거래하세요.<br/>
-                                로보토스는 B2B, B2C, C2C 거래가 이루어질 수 있게<br/>
-                                구매자와 판매자를 연결하는 허브 역할을 합니다.<br/>
-                                정해진 예산에서 딱맞는 판매자를 만나세요.<br/>
-                                AI알고리즘이 자동으로 매칭하여<br/>
+                                로보토스는 B2B, B2C, C2C 거래가 이루어질 수 있게 <br/>
+                                구매자와 판매자를 연결하는 허브 역할을 합니다. <br/>
+                                정해진 예산에서 딱맞는 판매자를 만나세요. <br/>
+                                AI알고리즘이 자동으로 매칭하여 <br/>
                                 최적화된 경험을 지원해주는 AI기반 매칭서비스를 제공합니다.
                             </p>
                         </div>

@@ -23,7 +23,8 @@ p{user-select: none;}
     top: 0;
     left: 0;
     width: calc(100vw - (100vw - 100%));
-    height: 100%;
+    /* height: 100%; */
+    height: 100vh;
     background-image: url('../assets/home-image/home-banner.png');
     background-size: cover;
     background-position: center;
@@ -124,5 +125,5 @@ p{user-select: none;}
 }
 @media screen and (max-width: 650px) {
     .home-bg-img{height: 600px;}
-    .home-bg-text h2{font-size: 30px;}
+    .home-bg-text h2{font-size: 25px;}
 }
