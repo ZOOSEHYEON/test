@@ -56,7 +56,8 @@ p{user-select: none;}
     }
 }
 .home-bg-text h2{
-    color: #fff; font-size: 72px;
+    /* color: #fff; font-size: 72px; */
+    color: #fff; font-size: 50px;
 }
 .home-bg-box{
     width: 1280px;
@@ -65,8 +66,10 @@ p{user-select: none;}
     box-shadow: 5px 5px 25px -5px gray;
     display: flex;
     position: absolute;
-    bottom: -125px;
+    /* bottom: -125px; */
+    bottom: 0px;
     left: 50%;
+    border-bottom: 1px solid #000;
     transform: translate(-50%, 100%);
     justify-content: space-between;
     align-items: center;

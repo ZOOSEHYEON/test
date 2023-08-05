@@ -23,9 +23,10 @@ const Home = () => {
                     <div className='blur-overlay'></div>
                     <div className='home-bg-text'>
                         {/* <h2>상상 그 이상,</h2> */}
-                        <h2>IT기술과 서비스로 더 나은 삶을 향해</h2>
+                        <h2>IT기술과 서비스로<br/>더 나은 삶을 향해</h2>
                     </div>
                     <div className={scrolled ? 'home-bg-box' : 'none'}>
+                    {/* <div className='home-bg-box'> */}
                         <div className='bg-text-box left-box'>
                             <div>
                                 <h4>Connect</h4>

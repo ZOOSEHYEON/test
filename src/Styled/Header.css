@@ -176,6 +176,9 @@
     line-height: 40px;
     cursor: pointer;
   }
+  @media screen and (max-width: 1800px){
+    .header-box{padding-left: 50px; padding-right: 50px;}
+  }
   @media screen and (max-width: 1000px) {
     .header-box{
       padding-left: 20px;

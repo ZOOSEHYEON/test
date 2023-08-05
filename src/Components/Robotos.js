@@ -31,7 +31,7 @@ const Robotos = () => {
                         <div ref={fadeIn1.ref} style={fadeIn1.style} className='left-mockup-box'>
                             <div className='text-align'>
                                 <img src={RobotosLogo} alt="robotoslogoimage"/>
-                                <h3>AI매칭 플랫폼 로보토스</h3>
+                                <h3>AI매칭 플랫폼<br/>로보토스</h3>
                             </div>
                             <div className='detail-btn'>
                                 <span>#AI 매칭</span>
@@ -43,7 +43,7 @@ const Robotos = () => {
                         <Controller>
                             <Scene duration={100} triggerHook="onEnter">
                             {(progress) => {
-                                const translateX = (1 - progress) * 500;
+                                const translateX = (1 - progress) * 200;
                                 TweenMax.to(".box", 1, { x: translateX });
                                 return (
                                 <div className="box" style={{height: "100%"}}>
