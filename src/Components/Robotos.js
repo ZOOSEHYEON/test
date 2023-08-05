@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import '../Styled/Robotos.css';
 import RobotosLogo from '../assets/image/robotos-logo.png';
 import Mockup from '../assets/robotos-image/mockup.png';
@@ -9,23 +9,52 @@ import Robotosillust1 from '../assets/robotos-image/robotos-illust-left.png';
 import Robotosillust2 from '../assets/robotos-image/robotos-illust-center.png';
 import Robotosillust3 from '../assets/robotos-image/robotos-illust-right.png';
 
+import { Controller, Scene } from "react-scrollmagic";
+import { TweenMax } from "gsap";
+
+import useScrollFadeIn from '../Hook/useScrollFadeIn';
+
 const Robotos = () => {
+
+    const fadeIn1 = useScrollFadeIn('down', 1, 0);
+    const fadeIn2 = useScrollFadeIn('up', 1, 0);
+    const fadeIn3 = useScrollFadeIn('up', 1, 200);
+    const fadeIn4 = useScrollFadeIn('up', 1, 100);
+    const fadeInLeft1 = useScrollFadeIn('rightToLeft', 1, 0); 
+    const fadeInLeft2 = useScrollFadeIn('rightToLeft', 1, 200); 
+    const fadeInLeft3 = useScrollFadeIn('rightToLeft', 1, 400); 
     return (
         <div id='service' className='robotos-wrap'>
             <div className='robotos-mockup-box'>
                 <div className='robotos-top-mockup-wrap'>
-                    <div className='left-mockup-box'>
-                        <div className='text-align'>
-                            <img src={RobotosLogo} alt="robotoslogoimage"/>
-                            <h3>AI매칭 플랫폼 로보토스</h3>
-                        </div>
-                        <div className='detail-btn'>
-                            <span>자세히 보기</span>
-                            <BsArrowRight className='detail-arrow' size={20} color="#3FA9F5"/>
+                    <div>
+                        <div ref={fadeIn1.ref} style={fadeIn1.style} className='left-mockup-box'>
+                            <div className='text-align'>
+                                <img src={RobotosLogo} alt="robotoslogoimage"/>
+                                <h3>AI매칭 플랫폼 로보토스</h3>
+                            </div>
+                            <div className='detail-btn'>
+                                <span>#AI 매칭</span>
+                                {/* <BsArrowRight className='detail-arrow' size={20} color="#3FA9F5"/> */}
+                            </div>
                         </div>
                     </div>
-                    <div className='right-mockup-box'>
-                        <img src={Mockup} alt="mockupimage"/>
+                    <div>
+                        <Controller>
+                            <Scene duration={100} triggerHook="onEnter">
+                            {(progress) => {
+                                const translateX = (1 - progress) * 500;
+                                TweenMax.to(".box", 1, { x: translateX });
+                                return (
+                                <div className="box" style={{height: "100%"}}>
+                                    <div className='right-mockup-box'>
+                                        <img src={Mockup} alt="mockupimage"/>
+                                    </div>
+                                </div>
+                                );
+                            }}
+                            </Scene>
+                        </Controller>
                     </div>
                 </div>
                 <div className='robotos-bottom-mockup-wrap'>
@@ -46,7 +75,7 @@ const Robotos = () => {
             </div>
             <div className='about-robotos-wrap'>
                 <div className='about-robotos-text-box'>
-                    <div className='about-top-text'>
+                    <div ref={fadeIn2.ref} style={fadeIn2.style} className='about-top-text'>
                         <div className='about-title-wrap'>
                             <div className='about-line'></div>
                             <h3>로보토스 소개</h3>
@@ -54,10 +83,10 @@ const Robotos = () => {
                         </div>
                         <p>로보토스는 E-커머스와 O2O를 결합한 서비스입니다.</p>
                     </div>
-                    <div className='about-bottom-text'>
-                        <div className='about-bottom-img-box'>
-                            <img src={Icon2} alt="iconimage"/> 
-                        </div>
+                    <div ref={fadeIn3.ref} style={fadeIn3.style} className='about-bottom-text'>
+                            <div className='about-bottom-img-box'>
+                                <img src={Icon2} alt="iconimage"/> 
+                            </div>
                         <div className='about-bottom-text-box'>
                             <p>
                                 더이상 발품팔 필요 없습니다! 이제부터 로보토스에서 쉽게 거래하세요.<br/>
@@ -71,7 +100,7 @@ const Robotos = () => {
                     </div>
                 </div>
                 <div className='about-robotos-illust-box'>
-                    <div className='robotos-illust-wrap'>
+                    <div ref={fadeInLeft1.ref} style={fadeInLeft1.style} className='robotos-illust-wrap'>
                         <div className='illust-img-box'>
                             <img src={Robotosillust1} alt="robotosillust"/>
                         </div>
@@ -89,13 +118,13 @@ const Robotos = () => {
                                     변화를 추구합니다
                                 </p>
                             </div>
-                            <div className='detail-btn'>
+                            {/* <div className='detail-btn'>
                                 <span>자세히 보기</span>
                                 <BsArrowRight className='detail-arrow' size={20} color="#191919"/>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
-                    <div className='robotos-illust-wrap order-setting'>
+                    <div ref={fadeInLeft2.ref} style={fadeInLeft2.style} className='robotos-illust-wrap order-setting'>
                         <div className='illust-img-box order1'>
                             <img src={Robotosillust2} alt="robotosillust"/>
                         </div>
@@ -113,13 +142,13 @@ const Robotos = () => {
                                     구축하고자 합니다.
                                 </p>
                             </div>
-                            <div className='detail-btn'>
+                            {/* <div className='detail-btn'>
                                 <span>자세히 보기</span>
                                 <BsArrowRight className='detail-arrow' size={20} color="#191919"/>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
-                    <div className='robotos-illust-wrap'>
+                    <div ref={fadeInLeft3.ref} style={fadeInLeft3.style} className='robotos-illust-wrap'>
                         <div className='illust-img-box'>
                             <img src={Robotosillust3} alt="robotosillust"/>
                         </div>
@@ -136,10 +165,10 @@ const Robotos = () => {
                                     여러분을 서포트해드립니다.
                                 </p>
                             </div>
-                            <div className='detail-btn'>
+                            {/* <div className='detail-btn'>
                                 <span>자세히 보기</span>
                                 <BsArrowRight className='detail-arrow' size={20} color="#191919"/>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -151,7 +180,7 @@ const Robotos = () => {
                         <u>당신의 든든한 파트너,</u><br/>
                         화진로보틱스
                     </h2>
-                    <div className='partner-btn'>
+                    <div ref={fadeIn4.ref} style={fadeIn4.style} className='partner-btn'>
                         <a href='https://docs.google.com/forms/d/e/1FAIpQLSf05_vX4gy_PY6OYXuyWbosedkNC_sWYiYM53JPgn7tpKLq9g/viewform?usp=sf_link' target='_blank' rel="noreferrer">제휴문의</a>
                         <BsArrowRight className='detail-arrow' size={32} color="#3FA9F5"/>
                     </div>

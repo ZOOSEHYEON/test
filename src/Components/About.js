@@ -14,7 +14,7 @@ const About = () => {
     const fadeIn4 = useScrollFadeIn('down', 1, 0);
     const fadeIn5 = useScrollFadeIn('down', 1, 200);
     const fadeIn6 = useScrollFadeIn('down', 1, 400);
-    const fadeIn7 = useScrollFadeIn('down', 1, 0);
+    const fadeIn7 = useScrollFadeIn('right', 1, 0);
 
     return (
         <div className='about-wrap'>
@@ -94,9 +94,18 @@ const About = () => {
                         <h2>화진로보틱스의 핵심가치</h2>
                         <div className='value-core-text-flex'>
                             <div>
+                                <h4>고객 중심의 혁신과 창의성</h4>
+                                <p>
+                                    우리는 항상 혁신과 창의성을 바탕으로<br/>
+                                    고객 중심의 효율적이고 혁신적인 솔루션을 제공합니다.<br/>
+                                    고객의 성공을 위해 항상 고객들의 니즈를 이해하고<br/>
+                                    최고의 서비스로 만족시키는 것을 우선시합니다.
+                                </p>
+                            </div>
+                            {/* <div>
                                 <h4>혁신과 창의성</h4>
                                 <p>
-                                    우리는 항상 새로운 아이디어와<br/>
+                                    우리는 항상 새로운 아이디어와<br/> 
                                     창의적인 방법을 모색하여<br/>
                                     효율적이고 혁신적인<br/>
                                     솔루션을 제공합니다.
@@ -110,10 +119,10 @@ const About = () => {
                                     최고의 서비스로 만족시키는 것을<br/>
                                     항상 우선시합니다.
                                 </p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
-                    <div ref={fadeIn7.ref} style={fadeIn7.style} className='value-core-img-wrap'>
+                    <div className='value-core-img-wrap'>
                         <img src={ValueCoreImg} alt="valuecoreimage"/>
                     </div>
                 </div>

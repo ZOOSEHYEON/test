@@ -165,6 +165,8 @@
     width: 100%;
     background: #fff;
     max-height: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .mobile-menu ul{
     list-style: none;
