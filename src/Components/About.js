@@ -14,7 +14,7 @@ const About = () => {
     const fadeIn4 = useScrollFadeIn('down', 1, 0);
     const fadeIn5 = useScrollFadeIn('down', 1, 200);
     const fadeIn6 = useScrollFadeIn('down', 1, 400);
-    const fadeIn7 = useScrollFadeIn('right', 1, 0);
+    const fadeIn7 = useScrollFadeIn('up', 1, 0);
 
     return (
         <div className='about-wrap'>
@@ -122,7 +122,7 @@ const About = () => {
                             </div> */}
                         </div>
                     </div>
-                    <div className='value-core-img-wrap'>
+                    <div ref={fadeIn7.ref} style={fadeIn7.style} className='value-core-img-wrap'>
                         <img src={ValueCoreImg} alt="valuecoreimage"/>
                     </div>
                 </div>

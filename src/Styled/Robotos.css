@@ -187,11 +187,11 @@
     width: 640px;
 }
 .illust-text-box{
-    height: 450px;
-    padding-left: 120px;
+    /* height: 450px; */
+    /* padding-left: 120px; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
 .illust-text-box .detail-btn{
     display: flex;
@@ -207,17 +207,22 @@
 .illust-title-box{
     display: flex;
     flex-direction: column;
-    height: 90%;
+    /* height: 90%; */
     justify-content: space-between;
+    align-items: center;
 }
 .illust-title-box h4{
     font-size: 38px;
-    color: #191919;
+    /* color: #191919; */
+    color: #000;
+    text-align: center;
 }
 .illust-title-box p{
-    margin-top: 16px;
-    font-size: 32px;
-    color: #4e4e4e;
+    margin-top: 20px;
+    font-size: 28px;
+    /* color: #4e4e4e; */
+    color: #000;
+    text-align: center;
 }
 .about-partner-wrap{
     margin-top: 240px;
