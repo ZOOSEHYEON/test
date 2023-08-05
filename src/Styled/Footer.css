@@ -49,8 +49,10 @@
     .text-flex p{font-size: 20px;}
 }
 @media screen and (max-width: 600px) {
-    .footer-container{padding-top: 20px; padding-bottom: 20px; height: 280px;}
+    .footer-container{padding-top: 20px; padding-bottom: 20px; height: 280px; justify-content: space-around;}
+    .footer-logo-box{margin-bottom: 0;}
+    .footer-logo-box img{width: 240px;}
     .top-text-box{flex-direction: column;}
     .bottom-text-box{flex-direction: column;}
-    .text-flex p{font-size: 16px;}
+    .text-flex p{font-size: 14px;}
 }
