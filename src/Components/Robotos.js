@@ -24,6 +24,7 @@ const Robotos = () => {
     const fadeInLeft1 = useScrollFadeIn('rightToLeft', 1, 0); 
     const fadeInLeft2 = useScrollFadeIn('rightToLeft', 1, 200); 
     const fadeInLeft3 = useScrollFadeIn('rightToLeft', 1, 400); 
+    
     return (
         <div id='service' className='robotos-wrap'>
             <div className='robotos-mockup-box'>

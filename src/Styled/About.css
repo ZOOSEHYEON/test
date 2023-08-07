@@ -189,13 +189,13 @@
 }
 @media screen and (max-width: 2000px) {
     .v-text-box p{font-size: 20px;}
-    .value-core-text-wrap{padding-left: 220px;}
+    .value-core-text-wrap{padding-left: 100px;}
 }
 /* @media screen and (max-width: 1900px) {
     
 } */
 @media screen and (max-width: 1900px) {
-    .value-core-text-wrap{padding-left: 100px;}
+    /* .value-core-text-wrap{padding-left: 100px;} */
 }
 @media screen and (max-width: 1700px) {
     .value-core-text-wrap h2{font-size: 50px;}
