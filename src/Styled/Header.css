@@ -170,6 +170,7 @@
   }
   .mobile-menu ul{
     list-style: none;
+    padding-bottom: 10px;
   }
   .mobile-menu ul li{
     height: 40px;

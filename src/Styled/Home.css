@@ -72,7 +72,7 @@ p{user-select: none;}
     /* bottom: -125px; */
     bottom: 0px;
     left: 50%;
-    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid #000; */
     transform: translate(-50%, 100%);
     justify-content: space-between;
     align-items: center;
