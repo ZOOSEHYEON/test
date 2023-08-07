@@ -45,7 +45,7 @@ const Robotos = () => {
                             <Controller>
                                 <Scene duration={100} triggerHook="onEnter">
                                 {(progress) => {
-                                    const translateX = (1 - progress) * 200;
+                                    const translateX = (1 - progress) * 500;
                                     TweenMax.to(".box", 1, { x: translateX });
                                     return (
                                     <div className="box" style={{height: "100%"}}>
