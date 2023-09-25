@@ -86,8 +86,7 @@ const Header = () => {
                   <Link to='service' smooth={true} duration={500} offset={-headerHeight} onClick={closeMenu}>서비스</Link>
                 </li>
                 <li>
-                <a href='https://docs.google.com/forms/d/e/1FAIpQLSf05_vX4gy_PY6OYXuyWbosedkNC_sWYiYM53JPgn7tpKLq9g/viewform?usp=sf_link' target='_blank' rel="noreferrer">제휴 문의</a>
-                  {/* <Link to='home' smooth={true} duration={500} onClick={closeMenu}>제휴 문의</Link> */}
+                  <a href='https://docs.google.com/forms/d/e/1FAIpQLSf05_vX4gy_PY6OYXuyWbosedkNC_sWYiYM53JPgn7tpKLq9g/viewform?usp=sf_link' target='_blank' rel="noreferrer">제휴 문의</a>
                 </li>
               </ul>
             </div>
